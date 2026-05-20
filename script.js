@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
         pixKeyInput.setSelectionRange(0, 99999); // For mobile devices
         navigator.clipboard.writeText(pixKeyInput.value).then(() => {
             const originalText = copyPixBtn.innerHTML;
-            copyPixBtn.innerHTML = '<i class="fas fa-check"></i> Copiado!';
+            copyPixBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
             copyPixBtn.style.backgroundColor = '#25D366';
             setTimeout(() => {
                 copyPixBtn.innerHTML = originalText;
@@ -175,12 +175,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const [year, month, day] = date.split('-');
         const formattedDate = `${day}/${month}/${year}`;
 
-        let message = `*NOVO PEDIDO - SITE* 🎂\n\n`;
-        message += `*Produto:* ${product}\n`;
-        message += `*Quantidade/Peso:* ${quantity}\n`;
-        message += `*Data do Evento:* ${formattedDate}\n`;
-        message += `*Detalhes:* ${details}\n\n`;
-        message += `Já realizei o pagamento via PIX e estou enviando o comprovante!`;
+        let message = `*NEW ORDER - WEBSITE* 🎂\n\n`;
+        message += `*Product:* ${product}\n`;
+        message += `*Quantity/Weight:* ${quantity}\n`;
+        message += `*Event Date:* ${formattedDate}\n`;
+        message += `*Details:* ${details}\n\n`;
+        message += `I have made the payment via PIX and I am sending the receipt!`;
 
         const encodedMessage = encodeURIComponent(message);
         const whatsappNumber = '5582991424574';
